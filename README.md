@@ -1,4 +1,4 @@
-# Esercizi Basi di Dati 💻 :book:
+# Esercizi Basi di Dati 💻
 ## lab 1: file processing 
 - **crea**
 - **scrivi**
