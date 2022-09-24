@@ -11,7 +11,8 @@ int main(void)
 		printf("Il file non può essere aperto\n");
         exit(-1);
 	}
-	printf("Ho creato/aperto il file\n");
+	
+	printf("Ho creato il file\n");
 	fclose(f);
 	return 0;
 }
