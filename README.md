@@ -1,7 +1,5 @@
 # Esercizi Basi di Dati 💻
 ## lab 1: file processing 
-- **crea**
-- **scrivi**
-- **leggi**
-- **modifica**
-- **inserisci**
+- **file**: crea, scrivi, leggi, modifica, inserisci in ordine
+- **database di canzoni**: cerca compositore, inserisci canzone, modifica compositore, cancella compositore
+
