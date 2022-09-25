@@ -14,16 +14,16 @@ Si intende dare al disk-jockey la possibilità di:
 
 int main(void)
 {
-    int ric;
+    int a;
     do
     {
         printf("1. cerca per compositore\n2. inserisci canzone\n3. modifica compositore\n4. cancella compositore\n(0 per uscire)\n");
         printf("Seleziona un'opzione: ");
-        scanf("%d", &ric);
-        switch(ric)
+        scanf("%d", &a);
+        switch(a)
         {
             case 0:
-                ric = 0;
+                a = 0;
                 break;
             case 1:
                 cerca_compositore();
@@ -39,6 +39,6 @@ int main(void)
                 break;
         }
 
-    } while (ric != 0);
+    } while (a != 0);
     return 0;
 }
