@@ -10,7 +10,6 @@ Si intende dare al disk-jockey la possibilità di:
 #include <stdio.h>
 #include <stdlib.h>
 #include "db.h"
-#define MAX_LEN 30
 
 int main(void)
 {
