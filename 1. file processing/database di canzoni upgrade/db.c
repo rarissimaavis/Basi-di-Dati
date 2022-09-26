@@ -45,6 +45,7 @@ void cerca_compositore()
     fclose(f);
 }
 
+//da aggiornare
 void inserisci_canzone()
 {
 	FILE *f;
