@@ -74,6 +74,79 @@ void inserisci_canzone()
     fclose(f);
 }
 
+/*
+[inserimento ordinato]
+
+void inserisci_canzone()
+{
+	FILE *f;
+	FILE *f_temp;
+	int inserted = 0;
+
+    printf("2. Inserimento di una canzone\nInserisci titolo e compositore: ");
+    char titolo[MAX_LEN+1];
+    char compositore[MAX_LEN+1];
+    scanf("%s %s", titolo, compositore);
+    canzone song = malloc(sizeof(*song));
+
+	if ((f = fopen("prova.txt", "r")) == NULL)
+	{
+		if ((f = fopen("prova.txt", "w")) == NULL)
+		{
+			printf("Il file non può essere aperto/creato\n");
+			exit(-1);
+		}
+		else
+		{
+			printf("? Inserisco la prima riga\n");
+			fprintf(f, "%s %s\n", song->titolo, song->compositore);
+			fclose(f);
+			return;
+		}
+	}
+	if ((f_temp = fopen("temp.txt", "w")) == NULL)
+	{
+		printf("Il file non può essere creato\n");
+        exit(-1);
+	}
+
+    fscanf(f, "%s %s", song->titolo, song->compositore);
+    while (!feof(f))
+    {
+        if ((strcmp(titolo, song->titolo) == 0) && (strcmp(compositore, song->compositore) == 0))
+        {
+            printf("Canzone già presente nel database\n");
+            fclose(f);
+            return;
+        }
+        else if (strcmp(song->titolo, titolo) > 0 && inserted == 0)
+        {
+            fprintf(f_temp, "%s %s\n", titolo, compositore);
+            inserted = 1;
+        }
+        else if (strcmp(song->titolo, titolo) == 0)
+        {
+            if (strcmp(song->compositore, compositore) > 0 && inserted == 0)
+            {
+                fprintf(f_temp, "%s %s\n", titolo, compositore);
+                inserted = 1;
+            }
+        }
+        fprintf(f_temp, "%s %s\n", song->titolo, song->compositore);
+        fscanf(f, "%s %s", song->titolo, song->compositore);
+    }
+    if (inserted == 0)
+	{
+		fprintf(f_temp, "%s %s\n", song->titolo, song->compositore);
+	}
+    free(song);
+	fclose(f_temp);
+	fclose(f);
+	remove("prova.txt");
+	rename("temp.txt", "prova.txt");
+}
+*/
+
 void modifica_compositore()
 {
     FILE *f, *f_tmp;
