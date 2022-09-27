@@ -85,7 +85,9 @@ void inserisci_canzone()
         if ((strcmp(titolo, song->titolo) == 0) && (strcmp(compositore, song->compositore) == 0))
         {
             printf("Canzone già presente nel database\n");
+            fclose(f_temp);
             fclose(f);
+            remove("temp.txt");
             return;
         }
         else if (strcmp(song->titolo, titolo) > 0 && inserted == 0)
