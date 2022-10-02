@@ -354,6 +354,7 @@ void cerca_giovani()
     printf("Artisti giovani:\n");
     canzone song = malloc(sizeof(*song));
     artista artist = malloc(sizeof(*artist));
+    
     fscanf(f2, "%s %s %d %s", artist->nome, artist->gruppo, &artist->anni, artist->genere);
     while (!feof(f2))
     {
