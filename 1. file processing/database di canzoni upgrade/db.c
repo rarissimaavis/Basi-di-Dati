@@ -20,10 +20,15 @@ struct artista
 
 void cerca_compositore()
 {
-    FILE *f;
-    if ((f = fopen("synthpop80s.txt", "r")) == NULL)
+    FILE *f1, *f2;
+    if ((f1 = fopen("primo.txt", "r")) == NULL)
     {
         printf("Il file non può essere aperto");
+        exit(-1);
+    }
+    if ((f2 = fopen("secondo.txt", "r")) == NULL)
+    {
+        printf("Il file non può essere aperto\n");
         exit(-1);
     }
 
@@ -31,18 +36,32 @@ void cerca_compositore()
     char comp[MAX_LEN+1];
     scanf("%s", comp);
 
+    artista artist = malloc(sizeof(*artist));
+    fscanf(f2, "%s %s %d %s", artist->nome, artist->gruppo, &artist->anni, artist->genere);
+    while (!feof(f2))
+    {
+        if (strcmp(comp, artist->nome) == 0)
+        {
+            printf("Dettagli sul compositore %s: gruppo %s, anni %d, genere %s\n", artist->nome, artist->gruppo, artist->anni, artist->genere);
+        }
+        fscanf(f2, "%s %s %d %s", artist->nome, artist->gruppo, &artist->anni, artist->genere);
+    }
+
     canzone song = malloc(sizeof(*song));
-    fscanf(f, "%s %s", song->titolo, song->compositore);
-    while (!feof(f))
+    fscanf(f1, "%s %s", song->titolo, song->compositore);
+    while (!feof(f1))
     {
         if (strcmp(comp, song->compositore) == 0)
         {
             printf("%s %s\n", song->titolo, song->compositore);
         }
-        fscanf(f, "%s %s", song->titolo, song->compositore);
+        fscanf(f1, "%s %s", song->titolo, song->compositore);
     }
+
     free(song);
-    fclose(f);
+    free(artist);
+    fclose(f1);
+    fclose(f2);
 }
 
 void inserisci_artista(char *compositore)
@@ -103,6 +122,7 @@ void inserisci_artista(char *compositore)
         scanf("%s %d %s", gruppo, &anni, genere);
         fprintf(f_temp, "%s %s %d %s\n", compositore, gruppo, anni, genere);
 	}
+
     free(artist);
 	fclose(f_temp);
 	fclose(f);
@@ -171,6 +191,7 @@ void inserisci_canzone()
 	{
 		fprintf(f_temp, "%s %s\n", titolo, compositore);
 	}
+
     free(song);
 	fclose(f_temp);
 	fclose(f);
@@ -351,6 +372,7 @@ void cerca_giovani()
         }
         fscanf(f2, "%s %s %d %s", artist->nome, artist->gruppo, &artist->anni, artist->genere); 
     }
+
     free(song);
     free(artist);
     fclose(f1);
