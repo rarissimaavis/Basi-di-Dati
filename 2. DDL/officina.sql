@@ -32,7 +32,7 @@ create table Ricambio
 
 create table Autoveicolo
 (
-	Targa varchar(10) not null,
+	Targa varchar(9) not null,
     Modello varchar(20) not null,
     Tipo varchar(20) not null,
     TipoAlimentazione varchar(20) not null,
@@ -54,7 +54,7 @@ create table Intervento
     DataInizio varchar(20) not null,
     DataFine varchar(20) not null,
     OreManodopera int not null,
-    TargaAutoveicolo varchar(10) not null,
+    TargaAutoveicolo varchar(9) not null,
     primary key(numProgressivo, NomeOfficina),
     foreign key(NomeOfficina) references Officina(Nome)
 		on update cascade
