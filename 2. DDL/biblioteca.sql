@@ -77,8 +77,12 @@ create table Copia
     CodiceLibro int not null,
     ISBN char(13) not null,
     primary key(CodiceCatalogazione),
-    foreign key(CodiceLibro) references Libro(Codice),
+    foreign key(CodiceLibro) references Libro(Codice)
+        on update cascade
+        on delete cascade,
     foreign key(ISBN) references Edizione(ISBN)
+        on update cascade
+        on delete cascade
 );    
 
 create table Prestito
