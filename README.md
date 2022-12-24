@@ -12,3 +12,4 @@
 ## query
 - **querybiblioteca**: modifica allo schema, inserimento dei dati, query di interrogazione
 - **querybiblioteca2**: query di interrogazione
+- **queryofficina**: query di interrogazione, join naturale, equi-join, funzioni di aggregazione, query annidate
