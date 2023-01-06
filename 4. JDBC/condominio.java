@@ -1,3 +1,6 @@
+//preso in input un intero X, estrarre i dati degli appartamenti a cui sono associate
+//spese la cui somma è maggiore di X
+
 package cond;
 
 import java.sql.*;

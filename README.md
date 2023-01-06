@@ -8,8 +8,13 @@
 ## DDL
 - **biblioteca**
 - **officina**
+- **condominio**
 
 ## query
 - **querybiblioteca**: modifica allo schema, inserimento dei dati, query di interrogazione
 - **querybiblioteca2**: query di interrogazione
 - **queryofficina**: query di interrogazione, join naturale, equi-join, funzioni di aggregazione, query annidate
+- **querycondominio**: query di interrogazione, "almeno 2", exists, any
+
+## JDBC
+- **condominio**: preso in input un intero X, estrarre i dati degli appartamenti a cui sono associate spese la cui somma è maggiore di X
