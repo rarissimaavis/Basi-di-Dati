@@ -1,4 +1,6 @@
 # Esercizi Basi di Dati 💻
+https://magenta-squirrel-e2f.notion.site/Basi-di-Dati-4d224d750ba04b91abcc2d4734a8401e
+
 ## file processing 
 - **file**: crea, scrivi, leggi, modifica, inserisci in ordine
 - **database di canzoni**: cerca compositore, inserisci canzone, modifica compositore, cancella compositore
